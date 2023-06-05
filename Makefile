@@ -14,7 +14,7 @@ local-release:
 	goreleaser release --snapshot --clean
 
 remote-release:
-	goreleaser release
+	goreleaser release --clean
 
 help:
 	cat Makefile
