@@ -9,7 +9,6 @@ builds:
     goarch:
       - amd64
       - arm64
-
 archives:
   - format: tar.gz
     name_template: >-
@@ -25,7 +24,15 @@ snapshot:
   name_template: "{{ incpatch .Version }}-next"
 changelog:
   sort: asc
-  filters:
-    exclude:
-      - '^docs:'
-      - '^test:'
+brews:
+  - name: ipmon
+    description: zero dependency ip address monitoring
+    homepage: https://github.com/alxsad/ipmon
+    license: "MIT"
+    tap:
+      owner: alxsad
+      name: homebrew-ipmon
+    commit_author:
+      name: alxsad
+      email: alxsad@gmail.com
+    folder: Formula
